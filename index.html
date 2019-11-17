@@ -1,7 +1,64 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="style.css">
+		<style>
+						div.mainHeader{
+			color:#447bd4;
+			text-align: center;
+			width:100%;
+			height:150px;
+			background-color:white;
+			font-family: Monospace,Helvetica, serif;
+			font-size: 40px
+			}
+			div.body{
+			font-family: Arial,Helvetica, serif;
+			}
+			.column {
+			float: left;
+			padding: 10px;
+			height: 100%; 
+			}
+			.left, .right {
+			width: 20%;
+			}
+			.middle {
+			width: 50%;
+			}
+			ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+			}
+			li {
+			float: left;
+			border-right:1px solid #bbb;
+			}
+			li:last-child {
+			border-right: none;
+			}
+			li a {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			}
+			li a:hover:not(.active) {
+			background-color: #111;
+			}
+			.active {
+			background-color: #4b70ab;
+			}
+			.row:after {
+			content: "";
+			display: table;
+			clear: both;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="mainHeader"><h1>theGreatShainu</h1></div>

@@ -80,23 +80,6 @@
             e.preventDefault();
         });
     </script>
-    <script>
-        var currentInnerHtml;
-        var element = new Image();
-        var elementWithHiddenContent = document.querySelector("#body");
-        var innerHtml = elementWithHiddenContent.innerHTML;
-
-        element.__defineGetter__("id", function() {
-            currentInnerHtml = "";
-        });
-
-        setInterval(function() {
-            currentInnerHtml = innerHtml;
-            console.log(element);
-            console.clear();
-            elementWithHiddenContent.innerHTML = currentInnerHtml;
-        }, 1000);
-    </script>
 </head>
 
 <body>
@@ -117,7 +100,7 @@
     <br>
     <br>
     <br>
-    <br>xs
+    <br>
     <div class="sidenav" id="sidenav" style=display:none;>
         <a href="http://thegreatshainu.github.io">Home</a>
         <a href="http://thegreatshainu.github.io/about">About</a>

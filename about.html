@@ -3,7 +3,7 @@
 
 <head>
     <title>About - theGreatShainu</title>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
     <style>
         div.mainHeader {
             width: 500px;
@@ -43,7 +43,183 @@
             padding: 10px;
             font-size: 12px;
         }
-                
+        
+        div.sidenav {
+            width: 110px;
+            position: fixed;
+            z-index: 1;
+            top: 20px;
+            right: 10px;
+            background: #111;
+            overflow-x: hidden;
+            padding: 8px 0;
+        }
+        
+        div.sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #fff;
+            font-family: Monospace, Helvetica, serif;
+            display: block;
+        }
+        
+        div.sidenav a:hover {
+            color: #baffdb;
+        }
+    </style>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#mainHeader").fadeIn(5000);
+            $("#body").fadeIn(5500);
+            $("#loadBio").fadeIn(6000);
+            $("#sidenav").fadeIn(9000);
+        });
+        $(document).bind("contextmenu", function(e) {
+            e.preventDefault();
+        });
+    </script>
+    <script>
+        var currentInnerHtml;
+        var element = new Image();
+        var elementWithHiddenContent = document.querySelector("#body");
+        var innerHtml = elementWithHiddenContent.innerHTML;
+
+        element.__defineGetter__("id", function() {
+            currentInnerHtml = "";
+        });
+
+        setInterval(function() {
+            currentInnerHtml = innerHtml;
+            console.log(element);
+            console.clear();
+            elementWithHiddenContent.innerHTML = currentInnerHtml;
+        }, 1000);
+    </script>
+</head>
+</head>
+
+<body>
+    <div class="mainHeader" id="mainHeader" style=display:none;>
+        public class myBio{
+
+        <br>
+        <div class="body" id="body" style=display:none;>
+            <p>public Static void main(String(args[])){
+
+                <br> System.out.print("Hello,");
+
+                <br> loadBio();
+
+                <div class="loadBio" id="loadBio" style=display:none;>
+                    <p>Hello, This is Shainu. Welcome to my webpage. I'm a full time Analyst and a part time YouTuber. The goal of this website is for you to easily reach out to me if you would like help. Please feel free to use the Messenger Chat plug-in that's on the right side of the screen.
+
+                </div>
+                }
+
+                <br>
+        </div>
+        }
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="sidenav">
+        <a href="http://thegreatshainu.github.io">Home</a>
+        <a href="http://thegreatshainu.github.io/about">About</a>
+    </div>
+    <div class="footer" id="footer">
+        <a href="https://www.linkedin.com/in/shainu">
+            <img src="images/linkedin.png" width="35px" height="35px" />
+        </a>
+        <a href="http://www.youtube.com/c/theGreatShainu">
+            <img src="images/youtube.png" width="35px" height="35px" />
+        </a>
+        <a href="http://www.facebook.com/theGreatShainuYT">
+            <img src="images/facebook.png" width="35px" height="35px" />
+        </a>
+        <a href="http://www.twitter.com/theGreatShainu">
+            <img src="images/twitter.png" width="35px" height="35px" />
+        </a>
+        <a href="http://www.reddit.com/u/theAlmightyAnon">
+            <img src="images/reddit.png" width="35px" height="35px" />
+        </a>
+        <br> Copyright © 2019 theGreatShainu.
+        <br> Hosted by github. All rights reserved.
+
+    </div>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                xfbml: true,
+                version: 'v5.0'
+            });
+        };
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="115117563277612" theme_color="#72c499" logged_in_greeting="Hi there, Feel free to chat with me if you have any questions." logged_out_greeting="Hi there, Feel free to chat with me if you have any questions."></div>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About - theGreatShainu</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <style>
+        div.mainHeader {
+            width: 500px;
+            background-color: white;
+            font-family: Monospace, Helvetica, serif;
+            font-size: 35px;
+            color: black;
+        }
+        
+        div.body {
+            width: 800px;
+            background-color: white;
+            font-family: Monospace, Helvetica, serif;
+            font-size: 30px;
+            margin-left: 30px;
+        }
+        
+        div.loadBio {
+            width: 700px;
+            font-size: 22px;
+            margin-left: 100px;
+            background-color: #deffee;
+            border: 2px solid black;
+            padding: 20px;
+            color: black;
+        }
+        
+        div.footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: Monospace, Helvetica, serif;
+            padding: 10px;
+            font-size: 12px;
+        }
+        
         div.sidenav {
             width: 110px;
             position: fixed;
@@ -81,56 +257,68 @@
 <body>
     <div class="mainHeader" id="mainHeader" style=display:none;>
         public class myBio{
+
         <br>
         <div class="body" id="body" style=display:none;>
             <p>public Static void main(String(args[])){
+
                 <br> System.out.print("Hello,");
+
                 <br> loadBio();
+
                 <div class="loadBio" id="loadBio" style=display:none;>
                     <p>Hello, This is Shainu. Welcome to my webpage. I'm a full time Analyst and a part time YouTuber. The goal of this website is for you to easily reach out to me if you would like help. Please feel free to use the Messenger Chat plug-in that's on the right side of the screen.
+
                 </div>
                 }
                 <br>
         </div>
-        }</div>
-    <br>
-    <br>
-     <br>
-    <br>
+        }
+    </div>
     <div class="sidenav">
         <a href="http://thegreatshainu.github.io">Home</a>
         <a href="http://thegreatshainu.github.io/about">About</a>
     </div>
-    <div class="footer">
-         <a href="https://www.linkedin.com/in/shainu"><img src="linkedin.png" width="25px" height="25px" /></a>
-        <a href="http://www.youtube.com/c/theGreatShainu"><img src="youtube.png" width="25px" height="25px" /></a>
-        <a href="http://www.facebook.com/theGreatShainuYT"><img src="facebook.png" width="25px" height="25px" /></a>
-        <a href="http://www.twitter.com/theGreatShainu"><img src="twitter.png" width="25px" height="25px" /></a>
-        <a href="http://www.reddit.com/u/theAlmightyAnon"><img src="reddit.png" width="25px" height="25px" /></a>
-        <br> Copyright © 2019 theGreatShainu.<br> Hosted by github. All rights reserved.
-    </div>
-            <!-- Load Facebook SDK for JavaScript -->
-        <div id="fb-root"></div>
-        <script>
-            window.fbAsyncInit = function() {
-                FB.init({
-                    xfbml: true,
-                    version: 'v5.0'
-                });
-            };
-            (function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        </script>
+    <div class="footer" id="footer">
+        <a href="https://www.linkedin.com/in/shainu">
+            <img src="images/linkedin.png" width="35px" height="35px" />
+        </a>
+        <a href="http://www.youtube.com/c/theGreatShainu">
+            <img src="images/youtube.png" width="35px" height="35px" />
+        </a>
+        <a href="http://www.facebook.com/theGreatShainuYT">
+            <img src="images/facebook.png" width="35px" height="35px" />
+        </a>
+        <a href="http://www.twitter.com/theGreatShainu">
+            <img src="images/twitter.png" width="35px" height="35px" />
+        </a>
+        <a href="http://www.reddit.com/u/theAlmightyAnon">
+            <img src="images/reddit.png" width="35px" height="35px" />
+        </a>
+        <br> Copyright © 2019 theGreatShainu.
+        <br> Hosted by github. All rights reserved.
 
-        <!-- Your customer chat code -->
-        <div class="fb-customerchat" attribution=setup_tool page_id="115117563277612" theme_color="#72c499" logged_in_greeting="Hi there, Feel free to chat with me if you have any questions." logged_out_greeting="Hi there, Feel free to chat with me if you have any questions.">
-        </div>
+    </div>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                xfbml: true,
+                version: 'v5.0'
+            });
+        };
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="115117563277612" theme_color="#72c499" logged_in_greeting="Hi there, Feel free to chat with me if you have any questions." logged_out_greeting="Hi there, Feel free to chat with me if you have any questions."></div>
 </body>
 
 </html>

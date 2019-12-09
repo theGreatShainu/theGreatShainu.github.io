@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact - theGreatShainu</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #333;
+            border-radius: 4px;
+            resize: vertical;
+        }       
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+        
+        input[type=submit] {
+            background-color: #6e57ff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+        
+        input[type=submit]:hover {
+            background-color: #8778ff;
+        }
+        
+        .container {
+            border-radius: 5px;
+            background-color: #e4e0ff;
+            padding: 20px;
+            margin-left: 30px;
+            width:680px
+        }
+        
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+            font-size: 20px;
+        }
+        
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+        /* Clear floats after the columns */
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .col-25,
+            .col-75,
+            input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+        div.mainHeader {
+            width: 500px;
+            background-color: white;
+            font-family: Monospace, Helvetica, serif;
+            font-size: 35px;
+            color: black;
+        }
+        
+        div.body {
+            width: 800px;
+            background-color: white;
+            font-family: Monospace, Helvetica, serif;
+            font-size: 30px;
+            margin-left: 30px;
+        }
+        
+        div.loadBio {
+            width: 700px;
+            font-size: 22px;
+            margin-left: 100px;
+            background-color: #deffee;
+            border: 2px solid black;
+            padding: 20px;
+            color: black;
+        }
+        
+        div.footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: Monospace, Helvetica, serif;
+            padding: 10px;
+            font-size: 12px;
+        }
+        
+        div.sidenav {
+            width: 110px;
+            position: fixed;
+            z-index: 1;
+            top: 35%;
+            right: 10px;
+            background: #111;
+            overflow-x: hidden;
+            padding: 8px 0;
+        }
+        
+        div.sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #fff;
+            font-family: Monospace, Helvetica, serif;
+            display: block;
+        }
+        
+        div.sidenav a:hover {
+            color: #8778ff;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#mainHeader").fadeIn(5000);
+            $("#body").fadeIn(5500);
+            $("#loadBio").fadeIn(6000);
+            $("#sidenav").fadeIn(9000);
+        });
+        $(document).bind("contextmenu", function(e) {
+            e.preventDefault();
+        });
+    </script>
+</head>
+
+<body>
+
+    <script>
+        function myFunction() {
+            alert("Submitted!");
+        }
+    </script>
+
+    <div class="mainHeader" id="mainHeader" style=display:none;>
+        public class contactMe{
+        <br>
+        <div class="body" id="body" style=display:none;>
+            <p>public Static void main(String(args[])){
+                <br> contactForm();</p>
+                <div class="container" id="container">
+                    <script type="text/javascript">
+                        var submitted = false;
+                    </script>
+                   <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='http://www.shainu.ga';}"></iframe>
+                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSff163vInUa1xhAtYVJ6JKH-bYhf20qwD3Bihudo4feY7OMsg/formResponse" method="post" target="hidden_iframe" onsubmit="return validateForm();">
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="fname">First Name</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="fname" name="entry.427595591" placeholder="Your first name..">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="lname">Last Name</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="lname" name="entry.981953841" placeholder="Your last name..">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="subject">Subject</label>
+                            </div>
+                            <div class="col-75">
+                                <textarea id="subject" name="entry.1862044810" placeholder="Your message.." style="height:200px"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <input onclick="window.location.href = 'https://www.shainu.ga/'; myFunction()" type="submit" value="Submit" />
+                        </div>
+                    </form>
+                </div>
+                }
+        </div>
+        }</div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="sidenav" id="sidenav" style=display:none;>
+        <a href="http://thegreatshainu.github.io">Home</a>
+        <a href="http://thegreatshainu.github.io/about">About</a>
+        <a href="http://thegreatshainu.github.io/contact">Contact</a>
+    </div>
+    <div class="footer" id="footer">
+        <a href="https://www.linkedin.com/in/shainu"><img src="images/linkedin.png" width="35px" height="35px" /></a>
+        <a href="http://www.youtube.com/c/theGreatShainu"><img src="images/youtube.png" width="35px" height="35px" /></a>
+        <a href="http://www.facebook.com/theGreatShainuYT"><img src="images/facebook.png" width="35px" height="35px" /></a>
+        <a href="http://www.twitter.com/theGreatShainu"><img src="images/twitter.png" width="35px" height="35px" /></a>
+        <a href="http://www.reddit.com/u/theAlmightyAnon"><img src="images/reddit.png" width="35px" height="35px" /></a>
+        <br> Copyright © 2019 theGreatShainu.
+        <br> Hosted by github. All rights reserved.
+    </div>
+
+</body>
+
+</html>

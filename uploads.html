@@ -80,23 +80,8 @@
             e.preventDefault();
         });
     </script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $.ajax(
-            {
-                type: "GET",
-                url:"https://www.youtube.com/feeds/videos.xml?channel_id=UC1VDpWpOf36CuP9fowyDZtQ",
-                dataType: "xml",
-                success: xmlParser
-            });
-        });
-        function xmlParser(xml){
-           $(xml).find("entry").each(function(){
-               $("#container").append('<div class="entry">' +$(this).find("title").text()+'"/>')
-                                     
-           }); 
-        }
-    </script>
+   <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/test.js"></script>
 </head>
 <body>
     <div class="mainHeader" id="mainHeader" style=display:none;>
@@ -112,27 +97,8 @@
             <div class="result" style=margin-left:100px;><p style="font-size:12px">Output Result:</p></div>
                 
             <div class="container" id="container" style=display:none;>
-                    <script>
-			if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
-				xmlhttp = new XMLHttpRequest();
-			} else {// code for IE6, IE5
-				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-			}
-			xmlhttp.open("GET", "https://www.youtube.com/feeds/videos.xml?channel_id=UC1VDpWpOf36CuP9fowyDZtQ", false);
-			xmlhttp.send();
-			xmlDoc = xmlhttp.responseXML;
-			document.write("<table border='1'>");
-			var x = xmlDoc.getElementsByTagName("CD");
-			for ( i = 0; i < x.length; i++) {
-				document.write("<tr><td>");
-				document.write(x[i].getElementsByTagName("link")[0].childNodes[0].nodeValue);
-				document.write("</td><td>");
-				document.write(x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue);
-				document.write("</td></tr>");
-			}
-			document.write("</table>");
-		</script>
-
+  
+                        <ul id="results"></ul>
                 </div>
                 }
 

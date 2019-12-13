@@ -5,7 +5,7 @@ $(document).ready(function()
     $.get(
         "https://www.googleapis.com/youtube/v3/channels",{
             part: 'contentDetails',
-            id: channelName,
+            id: 'UC1VDpWpOf36CuP9fowyDZtQ',
             key: 'AIzaSyC1qeQOUKy7dNZPbiv0U_x9N3UZqQNqzRc'},
             function(data){
                 $.each(data.items, function(i,item){
